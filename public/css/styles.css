@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+
+    /*Paleta de colores*/
+    --amarillo: #fff159;
+    --azul: #03264c;
+    --verde: #39b54a;
+    --negro: #1c1c1c;
+    --gris-oscuro: #666;
+    --azul-claro: #1259c3;
+    --gris-claro: #ebebeb;
+  
+    /*tamaños tipograficos*/
+    --texto: 12px;
+    --titulos: 24px;
+    --precios: 18px;
+    --descuentos: 16px;
+    --descripcion: 16px;
+  }
+
+
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+p {
+    font-size: var(--texto);
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--gris-claro);
+    min-width: 360px;
+}
+
+/*header*/
+
+header {
+    background-color: var(--amarillo);
+    width: 100%;
+}
+
+.header-contenedor1 {
+    
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header-contenedor1__img {
+    justify-content: center;
+    width: 50%;
+    
+}
+
+.header-contenedor1__img img {
+    width: 150px;
+}
+
+.header-contenedor1__buscar {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.header-contenedor1__buscar input {
+    width: 100%;
+}
+
+.header-contenedor1__texto {
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+.header-contenedor2 nav {
+    display: none;
+}
+
+.header-contenedor2 nav ul {
+    padding-bottom: 20px;
+}
+
+.header-contenedor2 nav ul li a {
+    font-size: var(--texto);
+    text-decoration: none;
+    color:var(--negro)
+}
+
+.menu-hamburguesa i{
+    border-radius: 5px;
+    color: white;
+    background-color: var(--azul-claro);
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+.menu-hamburguesa {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/*banner*/
+.banner {
+    width: 100vw;
+}
+
+
+/*main*/
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+main h2 {
+    color: var(--gris-oscuro);
+}
+
+.lista-productos {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+}
+
+.producto {
+    background-color: #fff;
+    margin: 10px;
+}
+
+.producto img {
+    width: 90%;
+}
+
+.producto__info {
+    border-top: 1px solid #ebebeb;
+    color: var(--negro);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    position: relative;
+}
+
+.producto__info i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--verde);
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.producto__info h3 {
+    padding-top: 10px;
+    font-size: var(--descripcion);
+    color: var(--gris-oscuro);
+    display: none;
+}
+
+.precio {
+    
+    font-size: var(--precios);
+    padding-right: 20px;
+    
+}
+
+.descuento {
+    
+    font-size: var(--descuentos);
+}
+
+.producto__info i,
+.descuento{
+    color: var(--verde);
+}
+
+
+
+/*footer*/
+
+footer {
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100vw;
+  
+}
+
+
+.footer-contenedor {
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+
+
+.footer-contenedor__item {
+    
+    padding: 15px 15px 15px 15px;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px
+}
+
+.footer-contenedor__item h2 {
+    font-size: var(--descripcion);
+}
+
+.footer-contenedor__item i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: var(--azul-claro);
+}
+
+.footer-copyright {
+    text-align: left;
+}
+
+/*-------------------------------------*/
+
+/*medias*/
+
+/*tablets & lager smartphones*/
+@media (min-width: 481px) {
+    
+    /*header*/
+
+    .header-contenedor2 nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-contenedor2 nav ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-contenedor2 nav ul li {
+        list-style: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .header-contenedor1__img {
+        
+        width: 30%;
+    }
+
+    .header-contenedor1__img img{
+        width: 120px;
+    }
+
+    .header-contenedor1__buscar {
+        
+        width: 20%;
+    }
+
+    .header-contenedor1__texto {
+        
+        width: 45%;
+        padding: 0px;
+    
+    }
+    .header-contenedor1__texto p {
+        font-size: 10px;
+    }
+ 
+
+    /*main*/
+
+
+    .producto {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 45%;
+    }
+
+    .menu-hamburguesa {
+        display: none;
+    }
+
+    
+
+     
+    }
+    /*laptops, lager tablets in landscape, ande small descktop*/
+    @media (min-width: 769px) {
+    
+    /*header*/
+    .header-contenedor1__img img{
+        width: 160px;
+    }
+
+
+    .header-contenedor1__texto {
+        width: 30%;
+    }
+
+    .header-contenedor1__texto p {
+        font-size: 12px;
+    }
+    
+    /*main*/
+    .producto {
+        width: 22%;
+    }
+
+    .precio {
+        font-size: 12px;
+    }
+
+    .descuento {
+        font-size: 14px;
+    }
+    
+    /*footer*/
+
+    .footer-contenedor__item {
+        flex-direction: row;
+        width: 33%;
+    }
+     
+    }
+
+    /*----------------------------------------------*/
+
+    /*LOGIN*/
+    main {
+        width: 100vw;
+    }
+   
+    .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: solid #000 1px;
+        margin: 10px;
+        padding: 10px   ;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 500px;
+    }
+
+    .login h2 {
+        padding-bottom: 30px;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    
+    .login-form input,
+    .login-form button {
+        margin: 10px;
+    }
+
+    .login-form input {
+        border: none;
+        padding: 10px   ;
+    }
+    
+
+    .login-form button {
+        margin-top: 20px;
+        background-color: var(--azul-claro) ;
+        color: var(--gris-claro);
+        border: none;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .login-form button:hover {
+        background-color: var(--azul);
+
+    }
+
+    @media (min-width: 769px) {
+        main {
+            font-size: 12px;
+        }
+
+        .login {
+            width: 60%;
+            height: 300px;
+        }
+    }
