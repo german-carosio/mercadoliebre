@@ -6,7 +6,7 @@ const app = express();
 const expressPort = 3030;
 
 // Ruta de archivos estaticos y uso
-app.use(express.static('public'))
+app.use(express.static(__dirname + 'public'))
 
 // Server start
 app.listen(process.env.PORT || 3030, () => {
